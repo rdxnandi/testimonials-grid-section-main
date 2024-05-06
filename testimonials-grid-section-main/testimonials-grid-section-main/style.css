@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Light-grayish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.container {
+  max-width: 1150px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  gap: 20px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 30px 40px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.item img {
+  border-radius: 50%;
+  width: 32px;
+  border: 2px solid var(--Light-gray);
+}
+
+.item .item_name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.items h2,
+h3 {
+  color: var(--White);
+}
+
+.item h3 {
+  margin-bottom: 3px;
+}
+
+.items h2 {
+  margin-bottom: 20px;
+}
+
+.items p {
+  color: var(--Light-gray);
+}
+
+.violet {
+  background: var(--Moderate-violet);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0;
+  grid-column: 1/3;
+}
+
+.grayish-blue {
+  background: var(--Very-dark-grayish-blue);
+  grid-column: 3/4;
+}
+
+.white1 {
+  background: var(--White);
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.blackish-blue {
+  background: var(--Very-dark-blackish-blue);
+  grid-row: 2/3;
+  grid-column: 2/4;
+}
+
+.blackish-blue img {
+  border: 2px solid var(--Moderate-violet);
+}
+
+.white2 {
+  background: var(--White);
+  grid-row: -1/1;
+  grid-column: 4/5;
+}
+
+.white1 h3,
+.white1 h2,
+.white2 h3,
+.white2 h2 {
+  color: var(--Very-dark-blackish-blue);
+}
+
+.white1 p,
+.white2 p {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.para {
+  line-height: 1.5;
+}
+
+@media (max-width: 400px) {
+  .container {
+    transform: scale(0.9);
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
